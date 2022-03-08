@@ -10,12 +10,27 @@
 </head>
 
 <body>
+
+    <header class="title">
+        <h1>TodoList</h1>
+    </header>
     
-    <div>
-    <h1>Olá, Mundo!</h1>
-    <input id="Nova Tarefa" type="text">
-    <button onclick=criartarefa() > Incluir</button>
+    <div class="newTaskContainer">
+        <input id="inputText" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa">
+        <button id="identifyButton" class="newTaskContainer__identify"> Incluir</button>
+
     </div>
-    
+
+    <div id="tasks" class="tasks">
+        <!-- 
+            <input type="checkbox">
+            <p>Exemplo</p>
+            <button id="modifyButton" class="tasks__modify">Modificar</button>
+            <button id="deleteButton" class="tasks__delete">Excluir</button>
+
+        -->
+    </div>
+
+    <script src="./todolist.js"></script>
 </body>
 </html>
