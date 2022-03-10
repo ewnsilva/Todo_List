@@ -6,6 +6,8 @@ idendifyButton.addEventListener("click", newTask)
 function newTask () {
     console.log(taskValue.value)
 
+    divTasks.style.border = "2px solid black"
+
     const div = document.createElement("div")
 
     const inputCheckBox = document.createElement("input")
@@ -18,7 +20,7 @@ function newTask () {
     const inputDeleteButton = document.createElement("button")
     inputDeleteButton.id = "deleteButton"
     inputDeleteButton.classList.add("task__delete")
-    inputDeleteButton.innerText = "excluir"
+    inputDeleteButton.innerText = "Excluir"
     inputDeleteButton.addEventListener("click", deleteTask)
 
     /*const inputModifyButton = document.createElement("button")
@@ -26,6 +28,7 @@ function newTask () {
     inputModifyButton.classList.add("tasks__modify")
     inputModifyButton.innerText = "modificar"
     inputModifyButton.addEventListener("click", modifyTask)*/
+
 
     div.appendChild(inputCheckBox)
     div.appendChild(p)
@@ -40,6 +43,6 @@ function deleteTask (e) {
     div.innerHTML = ""
 }
 
-function modifyTask () {
+/*  function modifyTask () {
     
-} 
+}  */
