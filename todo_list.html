@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="todo_list.css">
+    <link rel="stylesheet" href="_css/todo_list.css">
     <title>TodoList</title>
 
 </head>
@@ -16,22 +16,23 @@
         <h1 class="title">TodoList</h1>
     </header>
     
-    <div class="newTaskContainer">
-        <input id="inputText" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa">
-        <button id="identifyButton" class="newTaskContainer__identify"> Incluir</button>
+    <form method ="post" action = "todo_list_processo.php">
+        <div class="newTaskContainer">
+            <input id="inputText" name="tarefa" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa">
+            <button id="identifyButton" class="newTaskContainer__identify"> Incluir</button>
 
-    </div>
+        </div>
 
-    <div id="tasks" class="tasks">
-        <!-- 
+        <div id="tasks" class="tasks">
+            <!-- 
             <input type="checkbox">
             <p>Exemplo</p>
             <button id="modifyButton" class="tasks__modify">Modificar</button>
             <button id="deleteButton" class="tasks__delete">Excluir</button>
 
-        -->
-    </div>
-
-    <script src="./todo_list.js"></script>
+            -->
+        </div>
+    </form>
+    <!-- <script src="./todo_list.js"></script> -->
 </body>
 </html>
