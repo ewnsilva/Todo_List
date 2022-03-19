@@ -16,23 +16,37 @@
         <h1 class="title">TodoList</h1>
     </header>
     
-    <form method ="post" action = "todo_list_processo.php">
+    <form method ="post" action = "src/processo.php">
+
         <div class="newTaskContainer">
             <input id="inputText" name="tarefa" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa">
             <button id="identifyButton" class="newTaskContainer__identify"> Incluir</button>
 
         </div>
-
-        <div id="tasks" class="tasks">
-            <!-- 
-            <input type="checkbox">
-            <p>Exemplo</p>
-            <button id="modifyButton" class="tasks__modify">Modificar</button>
-            <button id="deleteButton" class="tasks__delete">Excluir</button>
-
-            -->
-        </div>
     </form>
-    <!-- <script src="./todo_list.js"></script> -->
+
+    <form method="get" action="" class = "article">
+
+        <div class = "lista">
+            <?php
+                while($exibirconsulta = mysqli_fetch_array($tarefasRegistradas)){
+
+                    $concluida = $exibirconsulta[1];
+                    $descricao = $exibirconsulta[2];
+
+                    print "<article>";
+
+                    print "$concluida";
+                    print "$descricao";
+
+                    print "</article>";
+                }
+
+
+                mysqli_close($conexao);
+            ?>
+        </div>
+
+    </form>
 </body>
 </html>
