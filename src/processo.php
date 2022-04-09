@@ -3,11 +3,13 @@
 
     $tarefa = $_POST['tarefa'];
 
-    $sql = "insert into tarefas (descricao) values ('$tarefa')";
-    $save = mysqli_query($conexao,$sql);
-    $sql = "select * from tarefas";
-    $tarefasRegistradas = mysqli_query($conexao,$sql);
-    $consulta = mysqli_num_rows($tarefasRegistradas)
+    $task = filter_input(INPUT_POST, '$tarefa');
 
+    $connection = getConnection('', '', '', '');
+    $insert = insertTask($connection, $task);
 
+    if ($insert = true) {
+        return header('Location: /error.php'):
+    }
     
+    return header('Location: /index.php');
