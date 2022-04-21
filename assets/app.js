@@ -31,9 +31,6 @@ function submitForm(){
 
 function insertTask(form){
 
-    const form = new FormData();
-    form.append('tasks', task);
-
     return fetch('/src/app/create.php', {
         method: 'POST',
         body: form

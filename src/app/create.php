@@ -1,13 +1,13 @@
 <?php
 
 require_once __DIR__ . '/../../configurations/bootstrap.php';
-require_once __DIR__ . '/../validation/validation.php';
+/* require_once __DIR__ . '/../validation/validation.php'; */
 
-$task = filter_input(INPUT_POST, 'task');
+$task = filter_input(INPUT_POST, 'tasks');
 
 require_once __DIR__ . '/../database/insert.php';
 
-$validatingTask = isValid($task);
+/* $validatingTask = isValid($task);
 
 if ($validatingTask === false) {
 
@@ -24,4 +24,4 @@ $inserting = insertTask(getConnection(), $task);
     ]);
 
     return;
-}
+} */

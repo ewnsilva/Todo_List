@@ -9,5 +9,7 @@ function getConnection()
 
     $connection = new PDO (
         'mysql:host='.$server.';dbname='.$dbname, $username, $password);
+
+        var_dump($pdo);
     }  
       
