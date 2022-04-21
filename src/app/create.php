@@ -2,11 +2,22 @@
 
 require_once __DIR__ . '/../../configurations/bootstrap.php';
 require_once __DIR__ . '/../validation/validation.php';
-require_once __DIR__ . '/../database/insert.php';
+require_once __DIR__ . '/../dbase/insert.php';
 
-$task = filter_input(INPUT_POST, 'task');
+/* $task = filter_input(INPUT_POST, 'task'); */
 
-$validatingTask = isValid($task);
+ if (isset($_POST['task'])) {
+    $task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING);
+    $query =    "INSERT INTO task
+                (description, created_at)
+                VALUES (($task), NOW())";
+    /* $statement = $connection->prepare($query); */
+    /* $statement->bindParam('description', $task); */
+    /* $statement->execute();  */
+}
+
+
+/* $validatingTask = isValid($task);
 
 if ($validatingTask === false) {
 
@@ -16,19 +27,12 @@ if ($validatingTask === false) {
     return;
 }
 
-echo json_encode([
-    'message' => 'Ação realizada com sucesso.',
-]);
-
 $inserting = insertTask(getConnection(), $task);
     if ($inserting === false) {
     echo json_encode([
-        'message'=> 'Não foi possivel cadastrar a nova tarefa.',
+        'message'=> 'Nao foi possivel cadastrar a nova tarefa.',
     ]);
 
     return;
 }
-
-echo json_encode([
-    'message'=> 'Ação realizada com sucesso.',
-]);
+ */

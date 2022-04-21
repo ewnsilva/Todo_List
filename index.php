@@ -4,8 +4,6 @@ require_once __DIR__ . '/configurations/bootstrap.php';
 
 $appName = $_ENV['APP_NAME'];
 
-echo $appName;
-
 ?>
 
 <!DOCTYPE html>
@@ -23,14 +21,14 @@ echo $appName;
 <body>
 
     <header>
-        <h1 class="title">TodoList</h1>
+        <h1 class="title">ToDoList</h1>
     </header>
     
-    <form method ="post" action = "/src/create.php">
+    <form method ="post" action = "/src/app/create.php">
 
         <div class="newTaskContainer">
-            <input id="inputText" name="tarefa" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa">
-            <button id="identifyButton" class="newTaskContainer__identify"> Incluir</button>
+            <input name="task" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa">
+            <button id="insertTask" type="submit" class="newTaskContainer__identify"> Incluir</button>
         </div>
         
     </form>

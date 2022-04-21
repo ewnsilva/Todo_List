@@ -8,7 +8,8 @@ function getConnection()
     $password  = $_SERVER['DATABASE_PASSWORD'];
 
     $conn = new PDO (
-        'mysql:host='.$server.';dbname='.$dbname, $username, $password); 
+        'mysql:host='.$server.';dbname='.$dbname, $username, $password);
+    }    
+ 
 
-    var_dump($pdo);
-}
+?>

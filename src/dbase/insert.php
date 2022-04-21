@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../../configurations/connection.php';
+
 function insertTask($connection, $task)
 {
     $query =    "INSERT INTO task
@@ -7,8 +9,9 @@ function insertTask($connection, $task)
                 VALUES
                 ('{$task}', NOW())";
 
-    $statemente = $connection->prepare($query);
+    $statement = $connection->prepare($query);
 
-    return $statement->execute($task);
+    return $statement->execute();
 
 }
+

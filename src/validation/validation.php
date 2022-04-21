@@ -1,9 +1,8 @@
 <?php
 
-function isValid(string $task): bool
-{
+function isValid($task){
     if (mb_strlen($task) > 1){
-        return false
+        return false;
     }
-    return true
+    return true;
 }
