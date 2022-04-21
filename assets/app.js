@@ -1,8 +1,8 @@
-window.onload = async function ()
+/* window.onload = async function ()
 {
     let taskList = await searchTask();
     mountTasksList(taskList);
-}
+} */
 
 function mountTasksList(tasks){
     let list = document.querySelector('.container ul');
@@ -15,7 +15,9 @@ function mountTasksList(tasks){
 }
 
 async function searchTask(){
-    return await fetch('/../src/app/list.php')
+    return await fetch('/src/app/list.php')
+    .then(resp=>resp.json())
+    .then(response=>response);
 }
 
 function submitForm(){
@@ -28,8 +30,13 @@ function submitForm(){
 }
 
 function insertTask(form){
-    return await fetch('/../src/app/create.php', {
+
+    const form = new FormData();
+    form.append('tasks', task);
+
+    return fetch('/src/app/create.php', {
         method: 'POST',
-        body: form}).then(resp => resp.json())
+        body: form
+    }).then(resp => resp.json())
         .then(response => response);
 }

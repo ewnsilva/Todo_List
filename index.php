@@ -25,21 +25,22 @@ $appName = $_ENV['APP_NAME'];
         <h1 class="title">ToDoList</h1>
     </header>
     
-    <form method ="post" action = "/src/app/create.php">
+    <form>
 
         <div class="newTaskContainer">
             <input name="task" class="newTaskContainer__task" type="input" placeholder="Nova Tarefa">
-            <button name= "insertTask" id="insertTask" class="newTaskContainer__identify"> Incluir</button>
+            <button name= "insertTask" id="insertTask" class="newTaskContainer__identify" type="submit"> Incluir</button>
         </div>
-        
+
     </form>
+ 
 
         <ul>
             <li>
-                teste
+                Teste
             </li>
         </ul>
 
-    </form>
+
 </body>
 </html>

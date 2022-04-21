@@ -5,14 +5,14 @@ require_once __DIR__ . '/../validation/validation.php';
 
 $task = filter_input(INPUT_POST, 'task');
 
-require_once __DIR__ . '/../dbase/insert.php';
+require_once __DIR__ . '/../database/insert.php';
 
 $validatingTask = isValid($task);
 
 if ($validatingTask === false) {
 
     echo json_encode([
-        'message' => 'O campo Nova Tarefa não pode ser deixado em branco.',   
+        'message' => 'O campo Nova Tarefa nao pode ser deixado em branco.',   
     ]);
     return;
 }
