@@ -2,22 +2,12 @@
 
 require_once __DIR__ . '/../../configurations/bootstrap.php';
 require_once __DIR__ . '/../validation/validation.php';
+
+$task = filter_input(INPUT_POST, 'task');
+
 require_once __DIR__ . '/../dbase/insert.php';
 
-/* $task = filter_input(INPUT_POST, 'task'); */
-
- if (isset($_POST['task'])) {
-    $task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING);
-    $query =    "INSERT INTO task
-                (description, created_at)
-                VALUES (($task), NOW())";
-    /* $statement = $connection->prepare($query); */
-    /* $statement->bindParam('description', $task); */
-    /* $statement->execute();  */
-}
-
-
-/* $validatingTask = isValid($task);
+$validatingTask = isValid($task);
 
 if ($validatingTask === false) {
 
@@ -35,4 +25,3 @@ $inserting = insertTask(getConnection(), $task);
 
     return;
 }
- */

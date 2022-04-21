@@ -14,6 +14,7 @@ $appName = $_ENV['APP_NAME'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/app.css">
+    <script src="assets/app.js"></script>
     <title><?= $appName; ?></title>
 
 </head>
@@ -27,17 +28,17 @@ $appName = $_ENV['APP_NAME'];
     <form method ="post" action = "/src/app/create.php">
 
         <div class="newTaskContainer">
-            <input name="task" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa">
-            <button id="insertTask" type="submit" class="newTaskContainer__identify"> Incluir</button>
+            <input name="task" class="newTaskContainer__task" type="input" placeholder="Nova Tarefa">
+            <button name= "insertTask" id="insertTask" class="newTaskContainer__identify"> Incluir</button>
         </div>
         
     </form>
 
-    <form method="get" action="" class = "article">
-
-        <div class = "list">
-            
-        </div>
+        <ul>
+            <li>
+                teste
+            </li>
+        </ul>
 
     </form>
 </body>
