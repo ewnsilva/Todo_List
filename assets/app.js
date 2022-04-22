@@ -1,15 +1,13 @@
-
-function submitForm(){    
-const form = document.querySelector('submitForm');
-    form.addEventListener('insertTask', function(event){
-        event.preventDefault();
-        const task = document.querySelector('form input');
-        insertTask(task.value)
+const form = document.getElementById('submitForm');
+console.log(form)
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    const task = document.querySelector('#submit');
+    insertTask({task: task.value})
     })
-};
 
 
-function insertTask(form){
+async function insertTask(form){
     return fetch('/../src/app/create.php', {
         method: 'POST',
         body: form

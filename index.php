@@ -15,7 +15,7 @@ $appName = $_ENV['APP_NAME'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $appName; ?></title>
     <link rel="stylesheet" href="/assets/app.css">
-    <script src="/assets/app.js"></script>
+    
 
 </head>
 
@@ -28,8 +28,9 @@ $appName = $_ENV['APP_NAME'];
     
     <form id= "submitForm">
         
-            <input name="task" id= "submit" class="newTaskContainer__task" type="input" placeholder="Nova Tarefa" required>
-            <button name= "insertTask" id="insertTask" class="newTaskContainer__identify" type="submit"> Incluir</button>
+            <input name="task" id= "submit" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa" required>
+            <!-- <input type="submit" value="Inserir" /> -->
+            <button name= "insertTask" id="insertTask" class="newTaskContainer__identify"> Incluir</button>
        
     </form>
     
@@ -41,6 +42,6 @@ $appName = $_ENV['APP_NAME'];
             </li>
         </ul>
 
-
+    <script src="/assets/app.js"></script>
 </body>
 </html>
