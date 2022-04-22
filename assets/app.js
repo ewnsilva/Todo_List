@@ -1,48 +1,18 @@
-const idendifyButton = document.getElementById("identifyButton")
-const taskValue = document.getElementById("inputText")
-const divTasks = document.getElementById("tasks")
-idendifyButton.addEventListener("click", newTask)
 
-function newTask () {
-    console.log(taskValue.value)
-
-    divTasks.style.border = "2px solid black"
-
-    const div = document.createElement("div")
-
-    const inputCheckBox = document.createElement("input")
-    inputCheckBox.type = "checkbox"
-
-    const p = document.createElement("p")
-    p.innerText = taskValue.value
-    document.getElementById("inputText").value = ""
-
-    const inputDeleteButton = document.createElement("button")
-    inputDeleteButton.id = "deleteButton"
-    inputDeleteButton.classList.add("task__delete")
-    inputDeleteButton.innerText = "Excluir"
-    inputDeleteButton.addEventListener("click", deleteTask)
-
-    /*const inputModifyButton = document.createElement("button")
-    inputModifyButton.id = "modifyButton"
-    inputModifyButton.classList.add("tasks__modify")
-    inputModifyButton.innerText = "modificar"
-    inputModifyButton.addEventListener("click", modifyTask)*/
+function submitForm(){    
+const form = document.querySelector('submitForm');
+    form.addEventListener('insertTask', function(event){
+        event.preventDefault();
+        const task = document.querySelector('form input');
+        insertTask(task.value)
+    })
+};
 
 
-    div.appendChild(inputCheckBox)
-    div.appendChild(p)
-    /*div.appendChild(inputModifyButton)*/
-    div.appendChild(inputDeleteButton)
-    divTasks.appendChild(div)
-    
+function insertTask(form){
+    return fetch('/../src/app/create.php', {
+        method: 'POST',
+        body: form
+    }).then(resp => resp.json())
+    .then(response => response);
 }
-
-function deleteTask (e) {
-    const div = e.target.parentNode
-    div.innerHTML = ""
-}
-
-/*  function modifyTask () {
-    
-}  */

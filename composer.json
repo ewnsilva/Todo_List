@@ -1,12 +1,10 @@
 {
-    "name": "ericl/todolist",
-    "description": "Gerenciador de Dependencias",
-    "authors": [
-        {
-            "name": "todolist"
-        }
-    ],
+    "name": "ewnsilva/todolist",
+    "description" : "Listagem de Tarefas.",
     "require": {
-        "vlucas/phpdotenv": "^4.2"
-    }
+        "php": ">5.6.40"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv"
+    },
 }
