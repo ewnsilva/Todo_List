@@ -1,7 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../../configurations/connection.php';
-
+require_once __DIR__ . '/../../configurations/bootstrap.php';
 
 function insertTask($connection, $task)
 {
@@ -10,6 +9,5 @@ function insertTask($connection, $task)
 
     $statement = $connection->prepare($query);
 
-    return $statement->execute($task);
-    
+    return $statement->execute($query);
 }

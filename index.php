@@ -16,32 +16,23 @@ $appName = $_ENV['APP_NAME'];
     <title><?= $appName; ?></title>
     <link rel="stylesheet" href="/assets/app.css">
     
-
 </head>
 
 <body>
-
     <header>
         <h1 class="title">ToDoList</h1>
     </header>
 
-    
-    <form id= "submitForm">
-        
-            <input name="task" id= "submit" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa" required>
-            <!-- <input type="submit" value="Inserir" /> -->
-            <button name= "insertTask" id="insertTask" class="newTaskContainer__identify"> Incluir</button>
-       
+    <form method="post" action="/src/app/create.php">
+            <input name="task"  class="newTaskContainer__task" type="text" placeholder="Nova Tarefa" required>
+            <button name= "insertTask" class="newTaskContainer__identify"> Incluir</button>
     </form>
     
-
-
         <ul>
             <li>
-                Teste
+                
             </li>
         </ul>
 
-    <script src="/assets/app.js"></script>
 </body>
 </html>

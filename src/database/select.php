@@ -1,8 +1,8 @@
 <?php
 
-function listALLTasks($connection)
+function listAllTasks($connection)
 {
-    $query = "SELECT * FROM tasks;";
+    $query = "SELECT * FROM tasks";
 
     $statement = $connection->query($query);
 

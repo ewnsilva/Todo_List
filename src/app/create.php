@@ -2,10 +2,9 @@
 
 require_once __DIR__ . '/../../configurations/bootstrap.php';
 require_once __DIR__ . '/../validation/validation.php';
-
-$task = filter_input(INPUT_POST, 'task');
-
 require_once __DIR__ . '/../database/insert.php';
+
+$task = filter_input(INPUT_GET, 'task');
 
 $validatingTask = isValid($task);
 
@@ -19,10 +18,11 @@ if ($validatingTask === false) {
 
 $inserting = insertTask(getConnection(), $task);
     if ($inserting === false) {
+
     echo json_encode([
         'message'=> 'Nao foi possivel cadastrar a nova tarefa.',
     ]);
-
     return;
 }
 
+return $inserting;
