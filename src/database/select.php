@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../../configurations/connection.php';
+
 function listAllTasks($connection)
 {
     $query = "SELECT * FROM tasks";

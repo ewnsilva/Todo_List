@@ -1,13 +1,13 @@
 <?php
 
-require_once __DIR__ . '/../../configurations/bootstrap.php';
+require_once __DIR__ . '/../../configurations/connection.php';
 
-function insertTask($connection, $task)
+function insertTask($conn, $task)
 {
     $query = "INSERT INTO tasks (description, created_at) 
-    VALUES ('{$task}', NOW())";
+    VALUES (?, NOW())";
 
-    $statement = $connection->prepare($query);
+    $statement = $conn->prepare($query);
 
-    return $statement->execute($query);
+    return $statement->execute([$task]);
 }

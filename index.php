@@ -15,6 +15,7 @@ $appName = $_ENV['APP_NAME'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $appName; ?></title>
     <link rel="stylesheet" href="/assets/app.css">
+    <script src="/assets/app.js"></script>
     
 </head>
 
@@ -23,16 +24,19 @@ $appName = $_ENV['APP_NAME'];
         <h1 class="title">ToDoList</h1>
     </header>
 
-    <form method="post" action="/src/app/create.php">
+    <form method="post">
             <input name="task"  class="newTaskContainer__task" type="text" placeholder="Nova Tarefa" required>
-            <button name= "insertTask" class="newTaskContainer__identify"> Incluir</button>
+            <button name="insertTask" id="submitForm" class="newTaskContainer__identify"> Incluir</button>
     </form>
     
-        <ul>
-            <li>
+        <ul id=mountTaskList>
+            <li >
                 
             </li>
         </ul>
 
 </body>
+
+
+
 </html>
