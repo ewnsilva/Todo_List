@@ -2,14 +2,14 @@
 
 require_once __DIR__ . '/../../configurations/connection.php';
 
-function listAllTasks($connection)
+function listAllTasks($conn)
 {
     $query = "SELECT * FROM tasks";
 
-    $statement = $connection->query($query);
+    $statement = $conn->query($query);
 
     $result = [];
-    foreach($statement as $task) {
+    foreach ($statement as $task){
         $result[] = $task;
     }
 

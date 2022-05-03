@@ -24,16 +24,18 @@ $appName = $_ENV['APP_NAME'];
         <h1 class="title">ToDoList</h1>
     </header>
 
-    <form method="post">
-            <input name="task"  class="newTaskContainer__task" type="text" placeholder="Nova Tarefa" required>
+    <form method="post" action="/src/app/create.php">
+            <input name="task" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa" required>
             <button name="insertTask" id="submitForm" class="newTaskContainer__identify"> Incluir</button>
     </form>
     
-        <ul id=mountTaskList>
-            <li >
-                
+    <div>
+        <ul name = list>
+            <li>
+
             </li>
         </ul>
+    </div>
 
 </body>
 
