@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/configurations/bootstrap.php';
-require_once __DIR__. '/src/app/list.php';
+require_once __DIR__. '/src/app/view.php';
 
 $appName = $_ENV['APP_NAME'];
 
@@ -32,11 +32,11 @@ $appName = $_ENV['APP_NAME'];
     
     <div>
         <ul>
-            <?php foreach($list as $task):?>
-            <li value = "<?= $task['id']?>"> 
-            <?=$task['description'];?> <button name="deleteTask" type="submit"> Deletar</button>
+            
+            <li <? echo showId($list);?>>
+            <? echo showValue($list);?>
             </li>
-            <?php endforeach;?>
+            
         </ul>
     </div>
 
