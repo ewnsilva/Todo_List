@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/configurations/bootstrap.php';
+require_once __DIR__. '/src/app/list.php';
 
 $appName = $_ENV['APP_NAME'];
 
@@ -26,19 +27,18 @@ $appName = $_ENV['APP_NAME'];
 
     <form method="post" action="/src/app/create.php">
             <input name="task" class="newTaskContainer__task" type="text" placeholder="Nova Tarefa" required>
-            <button name="insertTask" id="submitForm" class="newTaskContainer__identify"> Incluir</button>
+            <button name="insertTask" class="newTaskContainer__identify"> Incluir</button>
     </form>
     
     <div>
-        <ul name = list>
-            <li>
-
+        <ul>
+            <?php foreach($list as $task):?>
+            <li value = "<?= $task['id']?>"> 
+            <?=$task['description'];?> <button name="deleteTask" type="submit"> Deletar</button>
             </li>
+            <?php endforeach;?>
         </ul>
     </div>
 
 </body>
-
-
-
 </html>

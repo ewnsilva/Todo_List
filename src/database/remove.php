@@ -4,9 +4,9 @@ require_once __DIR__ . '/../../configurations/connection.php';
 
 function deleteTask($conn, int $id)
 {
-    $query = "DELETE FROM tasks WHERE id = '{$id}';";
+    $query = "DELETE FROM tasks WHERE id = {$id};";
 
-    $statement = $conn->query($query);
+    $conn->prepare($query);
 
-    return $statement->execute([$task]);
+    return $query->execute([$id]);
 }

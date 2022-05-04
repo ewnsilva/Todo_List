@@ -6,4 +6,6 @@ require_once __DIR__ . '/../database/insert.php';
 
 $task = filter_input(INPUT_POST, 'task', FILTER_SANITIZE_STRING);
 
-insertTask(getConnection(), $task);
+if (insertTask(getConnection(), $task)){
+    header('Location:/../../../index.php');
+};
