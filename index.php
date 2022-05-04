@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/configurations/bootstrap.php';
-require_once __DIR__. '/src/app/view.php';
+require_once __DIR__ . '/src/app/list.php';
 
 $appName = $_ENV['APP_NAME'];
 
@@ -30,15 +30,13 @@ $appName = $_ENV['APP_NAME'];
             <button name="insertTask" class="newTaskContainer__identify"> Incluir</button>
     </form>
     
-    <div>
-        <ul>
-            
-            <li <? echo showId($list);?>>
-            <? echo showValue($list);?>
-            </li>
-            
-        </ul>
-    </div>
+    <ul>
+        <?php foreach($list as $task):?>
+        <li value = "<?= $task['id']?>">
+        <?= $task['description']; ?>
+        </li>
+        <?php endforeach;?>
+    </ul>
 
 </body>
 </html>
