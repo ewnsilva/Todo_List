@@ -57,7 +57,7 @@ a {
     width: 44px;
     height: 16px;
     cursor: pointer;
-    border-radius: 1px;
+    border-radius: 3px;
     margin-left: auto;
 }
 
@@ -70,7 +70,7 @@ a:hover {
 }
 
 ul {
-    font-size: 20pt;
+    font-size: 14pt;
     word-break: break-word;
     padding-left: 40px;
 }
@@ -105,8 +105,15 @@ input.checkbox {
         width: 760px;
     }
 
+    a{
+        font-size: 12pt;
+        width: 52px;
+        height: 19px;
+    }
+
     ul {
         width: 750px;
+        font-size: 16pt;
     }
 
     li {
