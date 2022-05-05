@@ -17,16 +17,16 @@ body {
     border-radius: 5px;
 }
 
-.newTaskContainer {
+.container {
     width: 200px;
     margin-bottom: 20px;
-    margin-left: 5px;
+    margin-left: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.newTaskContainer__identify {
+.submitButton {
     background-color: rgb(149, 149, 149);
     text-align: center;
     color: white;
@@ -36,71 +36,79 @@ body {
     height: auto;
     cursor: pointer;
     margin-left: 5px;
-   
 }
 
-.newTaskContainer__task {
+.submitButton:hover {
+    background-color: green;
+}
+
+.insertTask {
     font-size: 20pt;
     border-radius: 5px;
     width: 200px;
 
 }
 
-.task__delete {
+a {
     background-color: rgb(149, 149, 149);
     text-align: center;
     color: white;
-    font-size: 11pt;
+    font-size: 10pt;
+    width: 44px;
+    height: 16px;
     cursor: pointer;
-    border-radius: 5px;
-
+    border-radius: 1px;
+    margin-left: auto;
 }
 
-p {
+a:hover {
+    background-color: red;
+}
+
+.containerUl {
+    padding-right: 40px;
+}
+
+ul {
     font-size: 20pt;
-    width: 245px;
     word-break: break-word;
+    padding-left: 40px;
 }
 
-.tasks{
+li {
     display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 5px;
-}
-
-.tasks div{
-    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     border-bottom: 2px solid black;
-    width: 100%;
+    width: 287px;
+    margin-bottom: 20px;
 }
 
-.tasks div:last-child {
-    border-bottom: transparent;
-
+input.checkbox {
+    cursor: pointer;
+    text-decoration: line-through;
 }
 
 @media screen and (min-width: 768px) {
+    
     .title {
     width: 768px;
     font-size: 60pt;
     }
-    .tasks{
+
+    .insertTask {
+        width: 760px; 
+    }
+
+    .container {
+        width: 760px;
+    }
+
+    ul {
         width: 750px;
     }
 
-    .newTaskContainer__task{
-        width: 760px; 
-
+    li {
+        width: 750px;
     }
-    .newTaskContainer {
-        width: 760px;
-    }
-p{
-    width: 100%;
-}
-
-}

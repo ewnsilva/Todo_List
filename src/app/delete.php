@@ -5,4 +5,6 @@ require_once __DIR__ . '/../database/remove.php';
 
 $id = filter_input(INPUT_GET, 'id');
 
-deleteTask(getConnection(), $id);
+if (deleteTask(getConnection(), $id)){
+    header('Location:/../../../index.php');
+};
