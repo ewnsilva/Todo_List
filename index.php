@@ -21,6 +21,7 @@ $appName = $_ENV['APP_NAME'];
 </head>
 
 <body>
+
     <header>
         <h1 class="title">ToDoList</h1>
     </header>
@@ -33,13 +34,13 @@ $appName = $_ENV['APP_NAME'];
     <div class="containerUl">
     <ul>
         <?php foreach($list as $task):?>
-        <li>
-        <input type="checkbox" class="checkbox"> 
-        <?=$task['description'];?> <a href="/src/app/delete.php?id=<?=$task['id'];?>">Delete</a>
-        </li>
+            <li>
+                <input type="checkbox" class="checkbox"> 
+                <?=$task['description'];?> <a href="/src/app/delete.php?id=<?=$task['id'];?>">Delete</a>
+            </li>
         <?php endforeach;?>
     </ul>
     </div>
-
+    
 </body>
 </html>
