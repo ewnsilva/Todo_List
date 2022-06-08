@@ -36,7 +36,7 @@ $appName = $_ENV['APP_NAME'];
         <?php foreach($list as $task):?>
             <li>
                 <input type="checkbox" class="checkbox"> 
-                <?=$task['description'];?> <a href="/src/app/delete.php?id=<?=$task['id'];?>">Delete</a>
+                <?=$task['description'];?> <a href="/src/app/delete.php?id=<?=$task['id'];?>">Deletar</a>
             </li>
         <?php endforeach;?>
     </ul>

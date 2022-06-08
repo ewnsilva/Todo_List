@@ -4,10 +4,11 @@ body {
     align-items: center;
     flex-direction: column;
     font-family: Arial;
+    background-color: #aed9ff;
 }
 
 .title {
-    background-color: rgb(149, 149, 149);
+    background-color: rgb(26 142 241);
     color: white;
     text-align: center;
     font-size: 40pt;
@@ -27,7 +28,7 @@ body {
 }
 
 .submitButton {
-    background-color: rgb(149, 149, 149);
+    background-color: rgb(58, 120, 255);
     text-align: center;
     color: white;
     font-size: 15pt;
@@ -36,20 +37,23 @@ body {
     height: auto;
     cursor: pointer;
     margin-left: 5px;
+    padding: 6px;
 }
 
 .submitButton:hover {
-    background-color: green;
+    background-color: rgb(2, 205, 120);
 }
 
 .insertTask {
     font-size: 15pt;
     border-radius: 5px;
-    width: 233px;
+    width: 230px;
+    padding: 6px;
+    padding-left: 3px;
 }
 
 a {
-    background-color: rgb(149, 149, 149);
+    background-color: rgb(58, 120, 255);
     text-align: center;
     color: white;
     font-size: 10pt;
@@ -58,6 +62,10 @@ a {
     cursor: pointer;
     border-radius: 3px;
     margin-left: auto;
+    padding: 2px;
+    margin-bottom: 3px;
+    text-decoration: none;
+
 }
 
 a:hover {
@@ -87,6 +95,8 @@ li {
 input.checkbox {
     cursor: pointer;
     text-decoration: line-through;
+    margin-right: 10px;
+
 }
 
 @media screen and (min-width: 768px) {
