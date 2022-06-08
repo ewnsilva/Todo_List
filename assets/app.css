@@ -4,17 +4,26 @@ body {
     align-items: center;
     flex-direction: column;
     font-family: Arial;
+    background-color: rgb(26 142 241);
+    
+}
+
+.content {
     background-color: #aed9ff;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
 }
 
 .title {
     background-color: rgb(26 142 241);
     color: white;
-    text-align: center;
     font-size: 40pt;
+    text-align: center;
     font-family: 'Times New Roman';
-    align-items: center;
-    width: 320px;
+    width: 332px;
     border-radius: 5px;
 }
 
@@ -28,7 +37,7 @@ body {
 }
 
 .submitButton {
-    background-color: rgb(58, 120, 255);
+    background-color: rgb(26 142 241);
     text-align: center;
     color: white;
     font-size: 15pt;
@@ -47,13 +56,13 @@ body {
 .insertTask {
     font-size: 15pt;
     border-radius: 5px;
-    width: 230px;
+    
     padding: 6px;
     padding-left: 3px;
 }
 
 a {
-    background-color: rgb(58, 120, 255);
+    background-color: rgb(26 142 241);
     text-align: center;
     color: white;
     font-size: 10pt;

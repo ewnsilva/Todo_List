@@ -22,25 +22,28 @@ $appName = $_ENV['APP_NAME'];
 
 <body>
 
-    <header>
-        <h1 class="title">ToDoList</h1>
-    </header>
-
-    <form method="post" action="/src/app/create.php" class="container">
+    <div class="content">
+        
+        <header>
+            <h1 class="title">ToDoList</h1>
+        </header>
+        
+        <form method="post" action="/src/app/create.php" class="container">
             <input name="task" class="insertTask" type="text" placeholder="Nova Tarefa" required>
             <button name="insertTask" class="submitButton"> Incluir</button>
-    </form>
-    
-    <div class="containerUl">
-    <ul>
-        <?php foreach($list as $task):?>
-            <li>
-                <input type="checkbox" class="checkbox"> 
-                <?=$task['description'];?> <a href="/src/app/delete.php?id=<?=$task['id'];?>">Deletar</a>
-            </li>
-        <?php endforeach;?>
-    </ul>
+        </form>
+        
+        <div class="containerUl">
+            <ul>
+                <?php foreach($list as $task):?>
+                    <li>
+                        <input type="checkbox" class="checkbox"> 
+                        <?=$task['description'];?> <a href="/src/app/delete.php?id=<?=$task['id'];?>">Deletar</a>
+                    </li>
+                    <?php endforeach;?>
+                </ul>
+            </div>
+            
     </div>
-    
 </body>
 </html>
